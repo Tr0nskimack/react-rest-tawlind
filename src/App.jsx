@@ -1,8 +1,12 @@
 import React from 'react'
+import Sidebar from './components/Shared/Sidebar'
+
 
 const App = () => {
   return (
-    <div className='bg-red-400'>App</div>
+    <div>
+      <Sidebar/>
+    </div>
   )
 }
 
