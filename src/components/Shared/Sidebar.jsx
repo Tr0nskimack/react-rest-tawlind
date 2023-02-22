@@ -3,7 +3,7 @@ import { RiHome6Line, RiPercentLine, RiPieChart2Line, RiNotification3Line, RiMes
 
 const Sidebar = () => {
   return (
-    <div className='bg-[#1f1d28] fixed left-0 top-0 w-28 h-full flex flex-col  justify-between'>
+    <div className='bg-[#1f1d28] fixed left-0 top-0 w-28 h-full flex flex-col  justify-between py-6 rounded-tr-xl rounded-br-xl'>
       <div>
         <ul className='pl-4'>
             <li>
@@ -49,7 +49,6 @@ const Sidebar = () => {
                 <RiLogoutCircleRLine  className='text-2xl' />
                 </a>
             </li>
-
         </ul>
       </div>
     </div> /* close div principal */
