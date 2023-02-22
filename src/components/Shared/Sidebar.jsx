@@ -7,8 +7,7 @@ const Sidebar = () => {
       <div>
         <ul className='pl-4'>
             <li>
-
-        <h1 className='text-2xl text-gray-300 uppercase font-bold text-center my-5'>Logo</h1>
+                <h1 className='text-2xl text-gray-300 uppercase font-bold text-center my-5'>Logo</h1>
             </li>
 
             <li className=' bg-[#262837] p-4 rounded-tl-lg rounded-bl-lg'>
@@ -41,16 +40,19 @@ const Sidebar = () => {
                 <RiSettings3Line  className='text-2xl' />
                 </a>
             </li>
-        </ul>
+        </ul> {/* close menu ul */}
       </div>
       <div>
+        <ul className='pl-4'>
             <li className=' hover:bg-[#262837] p-4 rounded-tl-lg rounded-bl-lg group transition-colors'>
                 <a className=' group-hover:bg-[#DC8274] p-4 flex justify-center rounded-xl text-[#DC8274] group-hover:text-white transition-colors' href="http://">
                 <RiLogoutCircleRLine  className='text-2xl' />
                 </a>
             </li>
+
+        </ul>
       </div>
-    </div>
+    </div> /* close div principal */
   )
 }
 
