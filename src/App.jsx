@@ -4,7 +4,7 @@ import Sidebar from './components/Shared/Sidebar'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-[#262837] w-full min-h-screen'>
       <Sidebar/>
     </div>
   )
