@@ -36,7 +36,7 @@ const App = () => {
       <div className='lg:col-span-6'>
         <header className=' p-4'>
           {/* title and search */}
-          <div flex flex-col gap-2>
+          <div flex flex-col gap-4 mb-6>
             <div>
               <h1 className='text-2xl text-gray-300'>Jose Marcano</h1>
               <p className='text-gray-500'>22/2/2023</p>
@@ -48,6 +48,13 @@ const App = () => {
               </div>
             </form>
           </div>
+          {/* nav */}
+          <nav className='text-gray-300 flex items-center justify-between border-b'>
+            <a href="http://" className='border-b py-2 px-4 border-[#DC8274] text-[#DC8274]' >Desayunos</a>
+            <a href="http://" className='border-b py-2 px-4'>Almuerzo</a>
+            <a href="http://" className='border-b py-2 px-4'>Sopa</a>
+            <a href="http://" className='border-b py-2 px-4'>Especial</a>
+          </nav>
         </header>
       </div>
       <div className='lg:col-span-2 bg-red-300 fixed lg:static right-0'>Carrito</div>
