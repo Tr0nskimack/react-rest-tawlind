@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Sidebar from './components/Shared/Sidebar'
-import { RiMapPinAddLine, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
+import { RiMapPinAddLine, RiSearchLine, RiCloseFill, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
 
 
 const App = () => {
@@ -26,10 +26,37 @@ const App = () => {
           <RiPieChart2Line />
         </button>
         <button onClick={toggleMenu} className=' text-white p-2'>
-          <RiMenu2Line />
+          {showMenu  ? <RiCloseFill/> : <RiMenu2Line />}
+          
         </button>
 
       </nav>
+
+    <main className='lg:pl-28 grid grid-cols-1 lg:grid-cols-8'>
+      <div className='lg:col-span-6'>
+        <header className=' p-4'>
+          {/* title and search */}
+          <div flex flex-col gap-2>
+            <div>
+              <h1 className='text-2xl text-gray-300'>Jose Marcano</h1>
+              <p className='text-gray-500'>22/2/2023</p>
+            </div>
+            <form>
+              <div className='w-full relative'>
+                <RiSearchLine className='absolute left-2 top-1/2 -translate-y-1/2 text-gray-300'/>
+                <input type="text" placeholder='Ingrese busqueda' className='bg-[#1f1d28] outline-none w-full  py-2 p-8 pr-4 text-gray-300 rounded-lg' />
+              </div>
+            </form>
+          </div>
+        </header>
+      </div>
+      <div className='lg:col-span-2 bg-red-300 fixed lg:static right-0'>Carrito</div>
+
+    </main>
+      
+
+
+      
     </div>
   )
 }
