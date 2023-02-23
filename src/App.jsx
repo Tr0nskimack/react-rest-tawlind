@@ -49,11 +49,11 @@ const App = () => {
             </form>
           </div>
           {/* nav */}
-          <nav className='text-gray-300 flex items-center justify-between border-b'>
-            <a href="http://" className='border-b py-2 px-4 border-[#DC8274] text-[#DC8274]' >Desayunos</a>
-            <a href="http://" className='border-b py-2 px-4'>Almuerzo</a>
-            <a href="http://" className='border-b py-2 px-4'>Sopa</a>
-            <a href="http://" className='border-b py-2 px-4'>Especial</a>
+          <nav className='text-gray-300 flex items-center justify-between '>
+            <a href="http://" className='relative py-2 pr-4 before:w-1/2 before:h-[1px] before:absolute before:bg-[#ec7c6a] text-[#ec7c6a] before:bottom-[2px] before:left-0 before:rounded-lg' >Desayunos</a>
+            <a href="http://" className='py-2 pr-4 border-[#ec7c6a]'>Almuerzo</a>
+            <a href="http://" className='py-2 pr-4'>Sopa</a>
+            <a href="http://" className='py-2 pr-4'>Especial</a>
           </nav>
         </header>
       </div>
