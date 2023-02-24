@@ -32,8 +32,8 @@ const App = () => {
 
       </nav>
 
-    <main className='lg:pl-28 grid grid-cols-1 lg:grid-cols-8'>
-      <div className='lg:col-span-6'>
+    <main className='lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20'>
+      <div className='lg:col-span-6 md:p-8'>
         <header className=' p-4'>
           {/* title and search */}
           <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6' >
@@ -55,12 +55,57 @@ const App = () => {
             <a href="http://" className='py-2 pr-4'>Sopa</a>
             <a href="http://" className='py-2 pr-4'>Especial</a>
           </nav>
+        </header>
           {/* Title content */}
-          <div className='flex items-center gap-4 justify-between'>
+          <div className='flex items-center gap-4 justify-between mb-16'>
             <h2 className='text-xl text-gray-300'>Menus</h2>
             <button className='text-gray-300 flex items-center bg-[#1f1d28] px-4 py-2 rounded-lg'><RiArrowDownSLine className='text-gray-300'/>Platos</button>
           </div>
-        </header>
+          {/*content */}
+          <div className='p-8 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3'>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+            {/*card */}
+            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
+              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
+              <p className='text-xl'>Contenido del plato</p>
+              <span className='text-gray-400'>2$</span>
+              <p className='text-gray-600'>Disponibles 20 platos</p>
+            </div>
+          </div>
       </div>
       <div className='lg:col-span-2 bg-red-300 fixed lg:static right-0'>Carrito</div>
 
