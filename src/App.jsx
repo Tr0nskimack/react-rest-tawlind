@@ -34,7 +34,7 @@ const App = () => {
 
     <main className='lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20'>
       <div className='lg:col-span-6 md:p-8'>
-        <header className=' p-4'>
+        <header >
           {/* title and search */}
           <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6' >
             <div>
