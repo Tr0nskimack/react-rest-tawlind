@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Sidebar from './components/Shared/Sidebar'
-import { RiMapPinAddLine, RiArrowDownSLine, RiSearchLine, RiCloseFill, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
+import { RiMapPinAddLine, RiCloseLine, RiArrowDownSLine, RiSearchLine, RiCloseFill, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
 
 
 const App = () => {
@@ -107,7 +107,11 @@ const App = () => {
             </div>
           </div>
       </div>
-      <div className='lg:col-span-2 bg-red-300 fixed lg:static right-0'>Carrito</div>
+      <div className='lg:col-span-2 bg-[#1f1d28] fixed lg:static top-0 right-0 text-gray-300 w-full h-full '>
+        <div className="relative bg-red-100">
+          <RiCloseLine className='text-2xl absolute left-4 top-4 box-content p-4 rounded-full bg-[#262837]'/>
+        </div>
+      </div>
 
     </main>
       
