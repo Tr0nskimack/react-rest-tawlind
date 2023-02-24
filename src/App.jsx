@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Sidebar from './components/Shared/Sidebar'
-import { RiMapPinAddLine, RiSearchLine, RiCloseFill, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
+import { RiMapPinAddLine, RiArrowDownSLine, RiSearchLine, RiCloseFill, RiUser3Line, RiPieChart2Line, RiMenu2Line} from "react-icons/ri";
 
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
       <div className='lg:col-span-6'>
         <header className=' p-4'>
           {/* title and search */}
-          <div flex flex-col gap-4 mb-6>
+          <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6' >
             <div>
               <h1 className='text-2xl text-gray-300'>Jose Marcano</h1>
               <p className='text-gray-500'>22/2/2023</p>
@@ -48,13 +48,18 @@ const App = () => {
               </div>
             </form>
           </div>
-          {/* nav */}
-          <nav className='text-gray-300 flex items-center justify-between '>
+          {/* tabs */}
+          <nav className='text-gray-300 flex items-center md:gap-8 justify-between md:justify-start mb-6'>
             <a href="http://" className='relative py-2 pr-4 before:w-1/2 before:h-[1px] before:absolute before:bg-[#ec7c6a] text-[#ec7c6a] before:bottom-[2px] before:left-0 before:rounded-lg' >Desayunos</a>
             <a href="http://" className='py-2 pr-4 border-[#ec7c6a]'>Almuerzo</a>
             <a href="http://" className='py-2 pr-4'>Sopa</a>
             <a href="http://" className='py-2 pr-4'>Especial</a>
           </nav>
+          {/* Title content */}
+          <div className='flex items-center gap-4 justify-between'>
+            <h2 className='text-xl text-gray-300'>Menus</h2>
+            <button className='text-gray-300 flex items-center bg-[#1f1d28] px-4 py-2 rounded-lg'><RiArrowDownSLine className='text-gray-300'/>Platos</button>
+          </div>
         </header>
       </div>
       <div className='lg:col-span-2 bg-red-300 fixed lg:static right-0'>Carrito</div>
