@@ -10,11 +10,17 @@ const App = () => {
 
   const toggleMenu = () =>{
     setShowmenu(!showMenu)
+    setShoworder(false)
   }
+  const ToggleOrder = () => {
+    setShoworder(!showorder)
+    setShowmenu(false)
+  }
+  
   return (
     <div className='bg-[#262837] w-full min-h-screen z-50'>
       <Sidebar showMenu={showMenu}/>
-      {/* movil */}
+      {/* MENU movil */}
       <nav className="bg-[#1f1d28] lg:hidden fixed left-0 bottom-0 w-full text-3xl py-2 px-8 flex items-center justify-between rounded-tl-xl rounded-tr-xl text-gray-400 ">
         <button className=' p-2'>
           <RiUser3Line />
@@ -22,7 +28,7 @@ const App = () => {
         <button className=' p-2'>
           <RiMapPinAddLine/>
         </button>
-        <button className=' p-2'>
+        <button onClick={ToggleOrder} className='p-2'>
           <RiPieChart2Line />
         </button>
         <button onClick={toggleMenu} className=' text-white p-2'>
@@ -32,8 +38,8 @@ const App = () => {
 
       </nav>
 
-    <main className='lg:pl-32 grid grid-cols-1 lg:grid-cols-8 p-4 pb-20'>
-      <div className='lg:col-span-6 md:p-8'>
+    <main className='lg:pl-32 grid grid-cols-1 lg:grid-cols-8 pb-20'>
+      <div className='lg:col-span-6 md:p-8 p-4'>
         <header >
           {/* title and search */}
           <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6' >
@@ -84,51 +90,33 @@ const App = () => {
               <span className='text-gray-400'>2$</span>
               <p className='text-gray-600'>Disponibles 20 platos</p>
             </div>
-            {/*card */}
-            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
-              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
-              <p className='text-xl'>Contenido del plato</p>
-              <span className='text-gray-400'>2$</span>
-              <p className='text-gray-600'>Disponibles 20 platos</p>
-            </div>
-            {/*card */}
-            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
-              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
-              <p className='text-xl'>Contenido del plato</p>
-              <span className='text-gray-400'>2$</span>
-              <p className='text-gray-600'>Disponibles 20 platos</p>
-            </div>
-            {/*card */}
-            <div className="bg-[#1f1d28] card p-8 rounded-xl flex flex-col justify-center items-center text-center text-gray-300 gap-2">
-              <img src="imagenes/hot2.png" className='w-40 h-40 object-cover -mt-16 shadow-2xl rounded-full' alt="" />
-              <p className='text-xl'>Contenido del plato</p>
-              <span className='text-gray-400'>2$</span>
-              <p className='text-gray-600'>Disponibles 20 platos</p>
-            </div>
+            
+           
           </div>
       </div>
-      <div className=' lg:col-span-2 bg-[#1f1d28] fixed lg:static top-0 right-0 text-gray-300 w-full h-full'>
+      <div className={`lg:col-span-2 bg-[#1f1d28] fixed lg:static top-0 text-gray-300 w-full h-full transition-all
+      ${showorder ? "right-0" : "-right-full"}`}>
         {/* Orders */}
-        <div className="relative pt-16 text-gray-300 p-8 h-full">
-          <RiCloseLine className='text-2xl absolute left-4 top-4  box-content p-3 rounded-full bg-[#262837]'/>
+        <div className="relative pt-16 text-gray-300 h-full">
+          <RiCloseLine onClick={ToggleOrder} className='lg:hidden text-2xl absolute left-4 top-4  box-content p-3 rounded-full bg-[#262837]'/>
           <h1 className='text-2xl my-4'>Orden: 1655789</h1>
         {/* Tabs */}
-        <div className='flex items-center gap-4 wrap mb-8'>
+        <div className='flex items-center gap-4 wrap mb-8 '>
           <button className='bg-[#DC8274] py-2 px-4 rounded-xl '>Aqui</button>
           <button className=' text-[#DC8274] py-2 px-4 rounded-xl border border-gray-600 '>Llevar</button>
           <button className=' text-[#DC8274] py-2 px-4 rounded-xl border border-gray-600 '>Delivery</button>
         </div>
         {/* Car */}
         <div>
-          <div className='grid grid-cols-6 mb-4 p-4'>
+          <div className='grid grid-cols-6 mb-4 '>
             <h5 className='col-span-4'>item</h5>
             <h5>Qty</h5>
             <h5>Price</h5>
           </div>
             {/* Products */}
-          <div className='bg-red-400 h-[400px] overflow-scroll'>
+          <div className=' h-[400px] md:h-[720px] lg:h-[540px] overflow-scroll'>
             {/* Product */}
-            <div className='bg-[#262837] p-4 rounded-xl mb-4'>
+            <div className='bg-[#262837] p-4 rounded-xl mb-4 '>
               <div className="grid grid-cols-6">
                 {/* description */}
                 <div className="col-span-4 flex items-center gap-3 mb-4">
@@ -159,6 +147,36 @@ const App = () => {
               </div>
             </div>
             {/* Product */}
+            <div className='bg-[#262837] p-4 rounded-xl mb-4'>
+              <div className="grid grid-cols-6 ">
+                {/* description */}
+                <div className="col-span-4 flex items-center gap-3 mb-4">
+                  <img src="/imagenes/hot.jpg" className=' w-16 h-16 rounded-full object-cover' />
+                  <div>
+                    <h5 className="text-sm"> Perros Calientes</h5>
+                    <p className="text-xs text-gray-500">$2.29</p>
+                  </div>
+                </div>
+                {/* cantidad */}
+                <div>
+                  <span>2</span>
+                </div>
+                {/* precio */}
+                <div>
+                  <span>$4.58</span>
+                </div>
+              </div>
+              {/* note */}
+              <div className='grid grid-cols-6 items-center'>
+                <form className="col-span-5 ">
+                  <input type="text" className='bg-[#1f1d28] rounded-lg py-2 px-4 outline-none' placeholder='Ordene ahora' />
+                </form>
+                <div >
+                <button className='border border-red-500 p-2 rounded-lg'><RiDeleteBin5Line className='text-[#DC8274]' /></button>
+                </div>
+
+              </div>
+            </div>
             <div className='bg-[#262837] p-4 rounded-xl mb-4'>
               <div className="grid grid-cols-6 ">
                 {/* description */}
